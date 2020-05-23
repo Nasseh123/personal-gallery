@@ -42,6 +42,11 @@ class image(models.Model):
         updated=image.objects.update(image=details)
         return updated
         # self.filter(id=self.id).update(image=details)
+
+    @classmethod
+    def allimages(cls):
+        imaged=cls.objects.all()
+        return imaged
         
 
 
