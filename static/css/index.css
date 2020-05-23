@@ -86,3 +86,7 @@
   .pointer{
     cursor: pointer;
   }
+  #myImg{
+    width: 550px;
+    height:250px;
+  }
