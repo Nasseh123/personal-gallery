@@ -6,12 +6,18 @@ class location(models.Model):
     location_name=models.CharField(max_length=60)
     def __str__(self):
         return self.location_name
+    
+    def save_location(self):
+        self.save()
+
 class category(models.Model):
     category_name=models.CharField(max_length=60)
-
+    
     def __str__(self):
         return self.category_name
 
+    def save_category(self):
+        self.save()
 class image(models.Model):
     image=models.ImageField(upload_to='articles/')
     image_name=models.CharField(max_length=30)
@@ -26,7 +32,17 @@ class image(models.Model):
     class Meta:
         ordering=['pub_date']   
 
-
+    def save_image(self):
+        self.save()
+    
+    def delete_image(self):
+        self.delete()
+    @ classmethod
+    def update_image(cls,details):
+        updated=image.objects.update(image=details)
+        return updated
+        # self.filter(id=self.id).update(image=details)
+        
 
 
   
