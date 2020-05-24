@@ -33,7 +33,7 @@
                 <ul class="dropdown-menu">
                     {% if category%}
                     {% for categorys in category%}
-                  <li><a href="#">{{categorys.category_name}}</a></li>
+                  <li><a href="{% url 'categorie' category_id=categorys.id %}">{{categorys.category_name}}</a></li>
                   {% endfor %}
                 {% endif %}
                 </ul>

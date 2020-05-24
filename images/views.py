@@ -5,10 +5,8 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 categorys=category.allcategory()
 locations=location.alllocation()
+imaged=image.allimages()
 def index(request):
-    imaged=image.allimages()
-    print(imaged)
-    
     # print(categorys)
     return render(request,'index.html',{"imaged":imaged,'category':categorys,'location':locations})
 
@@ -32,3 +30,12 @@ def imagepath(request,image_id):
     except DoesNotExist:
         raise Http404()
     return render(request,"image.html", {"imageds":imageds})
+
+
+def categorie(request,category_id,context=None):
+    try:
+        categoriey=category.objects.get(id=category_id)
+        print(categoriey)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"category.html",{"categoriey":categoriey,"imaged":imaged,'category':categorys})
