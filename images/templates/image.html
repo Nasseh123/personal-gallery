@@ -1,0 +1,32 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+      {% block content%}
+    <div class="container">
+
+        <div class="row">
+          <img src="{{imageds.image.url}}"  class="img-responsive" alt="">
+        </div>
+     
+        <div class="row">
+          <h1 class="text-center">{{imageds.image_name}}</h1>
+        </div>
+     
+        <div class="row">
+          <p>{{article.post}}</p>
+        </div>
+     
+        <div class="row">
+          <p>Posted {{imageds.pub_date|timesince}} by {{imageds.editor.first_name}}</p>
+        </div>
+     
+      </div>  
+      {% endblock %}
+  </body>
+  </html> 
