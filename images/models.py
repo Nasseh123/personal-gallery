@@ -18,6 +18,13 @@ class category(models.Model):
 
     def save_category(self):
         self.save()
+    
+    @classmethod
+    def allcategory(cls):
+        categorys=cls.objects.all()
+        
+        return categorys
+
 class image(models.Model):
     image=models.ImageField(upload_to='articles/')
     image_name=models.CharField(max_length=30)

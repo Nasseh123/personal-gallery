@@ -1,9 +1,13 @@
 from django.shortcuts import render
-from .models import image
+from .models import image,category
 # Create your views here.
+categorys=category.allcategory()
 def index(request):
     imaged=image.allimages()
-    return render(request,'index.html',{"imaged":imaged,})
+    print(imaged)
+    
+    # print(categorys)
+    return render(request,'index.html',{"imaged":imaged,'category':categorys,})
 
 def search_results(request):
     if 'image_name' in request.GET and request.GET['image_name']:
@@ -16,3 +20,6 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
+
+
+#
