@@ -47,7 +47,11 @@ class image(models.Model):
     def allimages(cls):
         imaged=cls.objects.all()
         return imaged
-        
+    
+    @classmethod
+    def search_by_name(cls,search_name):
+        imaged=cls.objects.filter(image_name__icontains=search_name)
+        return imaged
 
 
   
