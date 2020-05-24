@@ -10,6 +10,11 @@ class location(models.Model):
     def save_location(self):
         self.save()
 
+    @classmethod
+    def alllocation(cls):
+        locations=cls.objects.all()
+        return locations
+        
 class category(models.Model):
     category_name=models.CharField(max_length=60)
     
