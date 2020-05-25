@@ -4,5 +4,6 @@ django-bootstrap==0.2.4
 django-bootstrap3==12.1.0
 Pillow==7.1.2
 psycopg2==2.8.5
+pyperclip==1.8.0
 pytz==2020.1
 sqlparse==0.3.1
