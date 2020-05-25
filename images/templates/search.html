@@ -37,10 +37,26 @@
       <div class="row">
     
       {% if images %}
-        {% for imaged in images %}
-          <div class="col-sm-6 col-md-3">
-              <h1>{{imaged.title}}</h1>
-          </div>
+        {% for imaged in images %} <div class="col-sm-6  col-md-4">
+            <div class="thumbnail">
+                <img id='myImg' src="{{imaged.image.url}}" class="img-responsive myImg" alt="Image">
+                <div class="caption">
+                    <h3>{{imaged.image_name}}</h3>
+                    <p>{{imaged.image_description| truncatechars:10}}.</p>
+                    <p><a href="# " class="btn btn-primary" role="button">Button</a> 
+                        <a href="{%url 'imagepath' image_id=imaged.id%}" class="btn btn-default" role="button">More info...</a></p>
+                </div>
+            </div>
+            <div id="myModal" class="modal mmyModal">
+                <span class="close">&times;</span>
+                <h1 id='caption'>{{imaged.image_name}}</h1>
+                <img class="modal-conten" id="img01" >
+                <div id="caption">
+                    <p>{{imaged.image_description}}.</p>
+                </div>
+            </div>
+        </div>
+          
         {% endfor %}
       {% endif %}
       </div>

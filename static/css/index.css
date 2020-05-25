@@ -90,3 +90,19 @@
     width: 250px;
     height:250px;
   }
+  .modal-conten{
+    width: 250px;
+    height:250px;
+    margin-left: 45%;
+  }
+  .myim{
+    width: 500px;
+    height:350px;
+  }
+  .im{
+    margin-top: 100px;
+    margin-left: 35%;
+  }
+  .mm{
+    font-size: 25px;
+  }

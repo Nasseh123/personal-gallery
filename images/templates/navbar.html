@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active"><a href="{%url 'index'%}">HOME <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Link</a></li>
+              
               
               
               <li class="dropdown">
@@ -59,7 +59,9 @@
             <!-- **************form********** -->
             <form class="navbar-form navbar-left" role='search' action="{% url 'search_results' %}">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" name="image_name">
+                <input type="text" class="form-control" placeholder="Search by name" name="image_name">
+                <!-- <input type="text" class="form-control" placeholder="Search by category" name="image_name">
+                <input type="text" class="form-control" placeholder="Search by location" name="image_name"> -->
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>

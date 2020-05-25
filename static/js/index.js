@@ -5,7 +5,7 @@ var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 
 var img = document.querySelectorAll(".myImg");
-alert(img.length)
+// alert(img.length)
 
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
@@ -31,3 +31,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 } 
+function copy_Share_Button() {
+  var sURL = window.location.href; //The actual address of the website
+  sTemp = "<input id=\"copy_to_Clipboard\" value=\"" + sURL + "\" />"    //creates new input button
+  $("body").append(sTemp);//append as html child elements to the body element
+  $("#copy_to_Clipboard").select();
+  document.execCommand("copy"); //system runs this command
+  $("#copy_to_Clipboard").remove();
+}

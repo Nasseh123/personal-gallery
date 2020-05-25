@@ -1,3 +1,5 @@
+{%load bootstrap3%}
+{%load static%}
 
   <!DOCTYPE html>
   <html lang="en">
@@ -5,28 +7,44 @@
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-      {% block content%}
-    <div class="container">
+    {% block styles %}
+    {% bootstrap_css %}
 
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% endblock %}
+  <body>
+      
+    {% include "navbar.html" %}
+      {% block content%}
+
+    <div class="im">
         <div class="row">
-          <img src="{{imageds.image.url}}"  class="img-responsive" alt="">
+            <div class="col-lg-12 center">
+          <img src="{{imageds.image.url}}"  class="img-responsive myim" alt="">
+          <h1 ><u>{{imageds.image_name}}</u></h1>        
+          <p style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 300;" class="mm">{{imageds.image_description}}</p>
+          <p style="font-size: small; font-family: fantasy; font-style: italic;">Posted {{imageds.pub_date|timesince}} from {{imageds.location}} area</p>
         </div>
+    </div>
      
         <div class="row">
-          <h1 class="text-center">{{imageds.image_name}}</h1>
+            <div class="col-md-10 ">
+
+            
+          
         </div>
-     
-        <div class="row">
-          <p>{{article.post}}</p>
-        </div>
-     
-        <div class="row">
-          <p>Posted {{imageds.pub_date|timesince}} from {{imageds.location}} area</p>
-        </div>
+    
      
       </div>  
+    </div>
+        
       {% endblock %}
+      {% block scripts %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{%static 'js/index.js'%}"></script>
+
+    {% bootstrap_javascript %}
+    {% endblock %}
   </body>
   </html> 
