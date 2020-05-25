@@ -15,6 +15,7 @@ for (let i = 0; i < img.length; i++) {
     // var modal = document.querySelectorAll(".mmyModal");
       modal.style.display = "block";
       modalImg.src = this.src;  
+      
 }
 }
 
