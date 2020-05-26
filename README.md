@@ -70,7 +70,7 @@ As a user I would like:
 
 ## Known Bugs
 
-> It does not have bugs.But if any problems should occur, email me at devsarahmarion@gmail.com
+> It does not have bugs.But if any problems should occur, email me at manassehbundi2017@gmail@gmail.com
 
 > * N/B Also it is not finished yet...more features and functionalities are still being worked on.
 
