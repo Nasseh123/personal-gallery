@@ -25,8 +25,7 @@ As a user I would like:
 
 > * Internet connection
 > * Click https://personalgalleryproject.herokuapp.com/) <br/>
-  or <br/>
-
+  
 
 
 ## Technologies Used
@@ -45,7 +44,7 @@ As a user I would like:
 
 > * Internet access
 > * ```git clone https://github.com/Nasseh123/personal-gallery.git```
-> * ```cd Gallery```
+> * ```cd PERSONAL-GALLERY```
 
 #### To install a virtual environment
 
